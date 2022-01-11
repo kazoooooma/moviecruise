@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #7f93a0;
+}
+body{
+    background-color: var(--primary-color);
+    margin: 0;
+}
+#header{
+    padding: 1rem;
+    /* display: flex;
+    justify-content: flex-end; */
+    position: relative;
+    background-color: var(--primary-color);
+    padding-bottom: 125px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#logo{
+    position: absolute; left: 5%;
+}
+#navigation-area{
+    position: absolute; left: 20%; top: 60%;
+}
+.search{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: black;
+}
+.search:focus{
+    outline: 0;
+    background-color: var(--primary-color);
+}
+.search::placeholder{
+    color: #ffffff;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie{
+    width: 250px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+}
+.movie-info{
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.movie-info h3{
+    margin-top: 0;
+}
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.movie-info span.green{
+    color: green;
+}
+.movie-info span.orange{
+    color: orange;
+}
+.movie-info span.red{
+    color: red;
+}
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+.movie:hover .overview{
+    transform: translate(0);
+}
+#subtitle{
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 1%;
+    padding-bottom: 2px;
+    border-bottom: solid #949494 1px;
+}
+a{
+    /* リンクの書式を削除 */
+    text-decoration: none;
+    cursor: pointer;
+}
+a:link{
+    /* 未訪問のリンクを黒色に設定 */
+    color: black;
+}
+a:visited{
+    /* 訪問済みのリンクを黒色に設定 */
+    color: black;
+}
+li{
+    /* 横に並べて表示 */
+    display: inline-block;
+    text-align: right;
+    margin-bottom: 50px;
+    font-size: 21px;
+}
+.navigation-double-margin{
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 18px;
+}
+
+/* ニュース */
+.title-container{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    text-align: center;
+}
+.title-text{
+    font-size: 24px;
+    font-weight: bold;
+}
+#article-container{
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+.txt-show{
+    position: relative;
+}
+#article-area{
+    display: flex;
+    position: absolute; left: 50%;
+    transform: translate(-50%,0);
+}
+#space{
+    padding-bottom: 400px;
+}
+.txt-hide{
+    position: relative;
+}
+#article-area2{
+    display: flex;
+    position: absolute; left: 50%;
+    transform: translate(-50%,0);
+}
+.date{
+    width: 300px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.article-info-line{
+    width: 300px;
+    margin-top: 10px;
+    line-height: 25px;
+    font-size: 16px;
+}
+#article2{
+    margin-left: 30px;
+    }
+#article3{
+    margin-left: 30px;
+}
+#article4{
+    margin-left: 30px;
+}
+#article6{
+    margin-left: 30px;
+}
+#article7{
+    margin-left: 30px;
+}
+#article8{
+    margin-left: 30px;
+}
+.hover1{
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+.hover1:hover {
+	box-shadow: 0 3px 6px 0 #bfbfbf;
+	transform: translateY(-0.1875em);
+}
+#morenews{
+    margin-top: 350px;
+    margin-right: 5%;
+    text-align: right;
+}
+
+/* 地図 */
+#view{
+    margin-top: 300px;
+}
+#map-line-container{
+    margin-top: 340px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    text-align: center;
+}
+#map-text{
+    font-size: 24px;
+    font-weight: bold;
+}
+#footer{
+    margin-top: 50px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
